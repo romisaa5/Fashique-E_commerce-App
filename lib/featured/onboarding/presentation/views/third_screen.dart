@@ -24,9 +24,9 @@ class ThirdScreen extends StatelessWidget {
             Spacer(),
             Image.asset('assets/images/onboard3.png'),
             PageIndicator(currentIndex: 2, totalPages: 3),
-            Text('Orgonaize your tasks', style: Styles.textStyle32),
+            Text( 'Unlock Exclusive Offers', style: Styles.textStyle32, textAlign: TextAlign.center,),
             Text(
-              'You can organize your daily tasks by adding your tasks into separate categories',
+              'Get special discounts, early access to new arrivals, and rewards just for you',
               style: Styles.textStyle16,
               textAlign: TextAlign.center,
             ),

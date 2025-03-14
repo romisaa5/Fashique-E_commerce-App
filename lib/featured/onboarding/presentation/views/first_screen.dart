@@ -30,9 +30,9 @@ class _FirstScreenState extends State<FirstScreen> {
             Spacer(),
             Image.asset('assets/images/onboard1.png'),
              PageIndicator(currentIndex: 0, totalPages: 3),
-            Text('Manage your tasks', style: Styles.textStyle32),
+            Text('Discover the Latest Fashion Trends', style: Styles.textStyle32,textAlign: TextAlign.center,),
             Text(
-              'You can easily manage all of your daily tasks in DoMe for free',
+              'Shop the hottest styles, from casual to chic, all in one place',
               style: Styles.textStyle16,
               textAlign: TextAlign.center,
             ),

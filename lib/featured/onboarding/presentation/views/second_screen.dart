@@ -24,9 +24,9 @@ class SecondScreen extends StatelessWidget {
             Spacer(),
             Image.asset('assets/images/onboard2.png'),
             PageIndicator(currentIndex: 1, totalPages: 3),
-            Text('Create daily routine', style: Styles.textStyle32),
+            Text('Seamless Shopping Experience', style: Styles.textStyle32, textAlign: TextAlign.center,),
             Text(
-              'In Uptodo  you can create your personalized routine to stay productive',
+              'Enjoy fast, secure, and hassle-free shopping with multiple payment options',
               style: Styles.textStyle16,
               textAlign: TextAlign.center,
             ),
