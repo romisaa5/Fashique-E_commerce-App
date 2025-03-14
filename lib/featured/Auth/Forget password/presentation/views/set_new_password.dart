@@ -1,6 +1,6 @@
 import 'package:e_commerce/core/utils/styles.dart';
 import 'package:e_commerce/core/widgets/custom_button.dart';
-import 'package:e_commerce/featured/Auth/Login/presentation/views/widgets/custom_textfield_for_password.dart';
+import 'package:e_commerce/featured/Auth/widgets/custom_textfield_for_password.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

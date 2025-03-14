@@ -1,3 +1,4 @@
+import 'package:e_commerce/constnts.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextfieldForEmail extends StatefulWidget {
@@ -26,7 +27,7 @@ class _CustomTextfieldForEmailState extends State<CustomTextfieldForEmail> {
         ),
         prefixIcon: const Icon(
           Icons.email,
-          color: Color(0xff8875FF),
+          color: KprimaryColor,
         ),
       ),
     );

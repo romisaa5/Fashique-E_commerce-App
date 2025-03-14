@@ -1,10 +1,11 @@
+import 'package:e_commerce/constnts.dart';
 import 'package:e_commerce/core/utils/app_router.dart';
 import 'package:e_commerce/core/utils/styles.dart';
 import 'package:e_commerce/core/widgets/custom_button.dart';
 import 'package:e_commerce/core/widgets/custom_button_signup_login.dart';
-import 'package:e_commerce/featured/Auth/Login/presentation/views/widgets/custom_devider.dart';
-import 'package:e_commerce/featured/Auth/Login/presentation/views/widgets/custom_textfield_for_password.dart';
-import 'package:e_commerce/featured/Auth/Login/presentation/views/widgets/custom_textfield_for_username.dart';
+import 'package:e_commerce/featured/Auth/widgets/custom_devider.dart';
+import 'package:e_commerce/featured/Auth/widgets/custom_textfield_for_password.dart';
+import 'package:e_commerce/featured/Auth/widgets/custom_textfield_for_username.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -58,12 +59,12 @@ class _LoginViewState extends State<LoginView> {
                   child: Text(
                     'Forget Passsword ?',
                     style:
-                        Styles.textStyle12.copyWith(color: Color(0xff8875FF)),
+                        Styles.textStyle12.copyWith(color: KprimaryColor),
                   ),
                 )),
             CustomButton(
                 text: 'Login',
-                color: Color(0xff8875FF),
+                color: KprimaryColor,
                 width: MediaQuery.of(context).size.width),
             SizedBox(height: 10.h),
             CustomDevider(),
@@ -91,7 +92,7 @@ class _LoginViewState extends State<LoginView> {
                     },
                     child: Text('   Register',
                         style: Styles.textStyle12
-                            .copyWith(color: Color(0xff8875FF)))),
+                            .copyWith(color: KprimaryColor))),
               ],
             ),
             SizedBox(

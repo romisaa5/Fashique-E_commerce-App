@@ -1,3 +1,4 @@
+import 'package:e_commerce/constnts.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextfieldforPassword extends StatefulWidget {
@@ -50,7 +51,7 @@ class _CustomTextfieldforPasswordState
         ),
         prefixIcon: const Icon(
           Icons.lock,
-          color: Color(0xff8875FF),
+          color: KprimaryColor
         ),
       ),
     );

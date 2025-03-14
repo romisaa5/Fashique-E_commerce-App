@@ -3,8 +3,6 @@ import 'package:e_commerce/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
-
 class CustomButton extends StatelessWidget {
   const CustomButton(
       {super.key,
@@ -24,11 +22,7 @@ class CustomButton extends StatelessWidget {
           width: width,
           height: 48.h,
           decoration: BoxDecoration(
-              border: Border.all(
-                color: KprimaryColor,
-              ),
-              borderRadius: BorderRadius.circular(2),
-              color: color),
+              borderRadius: BorderRadius.circular(2), color: color),
           child: Center(
             child: Text(
               text,
