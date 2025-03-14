@@ -1,3 +1,4 @@
+import 'package:e_commerce/constnts.dart';
 import 'package:e_commerce/core/utils/app_router.dart';
 import 'package:e_commerce/core/utils/styles.dart';
 import 'package:e_commerce/core/widgets/custom_button.dart';
@@ -34,7 +35,7 @@ class WelcomeView extends StatelessWidget {
                   GoRouter.of(context).pushReplacement(AppRouter.loginView);
                 },
                 text: 'LOGIN',
-                color: Color(0xff8875FF),
+                color: KprimaryColor,
                 width: MediaQuery.of(context).size.width),
             CustomButton(
                 onTap: () {

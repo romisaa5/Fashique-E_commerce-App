@@ -1,3 +1,4 @@
+import 'package:e_commerce/constnts.dart';
 import 'package:e_commerce/core/utils/app_router.dart';
 import 'package:e_commerce/core/utils/styles.dart';
 import 'package:e_commerce/core/widgets/custom_button.dart';
@@ -18,39 +19,41 @@ class _FirstScreenState extends State<FirstScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30.0),
-      child: Column(
-        spacing: 25,
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Spacer(),
-          Image.asset('assets/images/onboard1.png'),
-           PageIndicator(currentIndex: 0, totalPages: 3),
-          Text('Manage your tasks', style: Styles.textStyle32),
-          Text(
-            'You can easily manage all of your daily tasks in DoMe for free',
-            style: Styles.textStyle16,
-            textAlign: TextAlign.center,
-          ),
-          Spacer(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              CustomButton(
-                width: 90.w,
-                text: 'Next',
-                color: Color(0xff8875FF),
-                onTap: () {
-              
-                  GoRouter.of(context).push(AppRouter.secondScreen);
-                },
-              )
-            ],
-          ),
-          Spacer()
-        ],
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 30.0),
+        child: Column(
+          spacing: 25,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Spacer(),
+            Image.asset('assets/images/onboard1.png'),
+             PageIndicator(currentIndex: 0, totalPages: 3),
+            Text('Manage your tasks', style: Styles.textStyle32),
+            Text(
+              'You can easily manage all of your daily tasks in DoMe for free',
+              style: Styles.textStyle16,
+              textAlign: TextAlign.center,
+            ),
+            Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                CustomButton(
+                  width: 90.w,
+                  text: 'Next',
+                  color: KprimaryColor,
+                  onTap: () {
+                
+                    GoRouter.of(context).push(AppRouter.secondScreen);
+                  },
+                )
+              ],
+            ),
+            Spacer()
+          ],
+        ),
       ),
     );
   }

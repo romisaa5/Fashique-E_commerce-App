@@ -13,14 +13,14 @@ class Styles {
     fontSize: 32.sp,
     fontWeight: FontWeight.bold,
     fontFamily: 'Lato',
-    color: Colors.white,
+  
     decoration: TextDecoration.none,
   );
 
   static final textStyle16 = TextStyle(
     fontSize: 16.sp,
     fontFamily: 'Lato',
-    color: Colors.grey[300],
+   
     decoration: TextDecoration.none,
   );
 }

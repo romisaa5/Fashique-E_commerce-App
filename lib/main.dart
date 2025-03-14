@@ -9,7 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -20,10 +19,9 @@ class MyApp extends StatelessWidget {
         return Builder(
           builder: (context) {
             return MaterialApp.router(
-              
               routerConfig: AppRouter.router,
-              theme: ThemeData.light(),
               debugShowCheckedModeBanner: false,
+              theme: ThemeData.light(), // تحديد الثيم الأبيض (Light Mode)
             );
           },
         );

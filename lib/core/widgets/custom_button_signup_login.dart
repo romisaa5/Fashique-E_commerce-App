@@ -1,3 +1,4 @@
+import 'package:e_commerce/constnts.dart';
 import 'package:e_commerce/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -19,7 +20,7 @@ class CustomButtonSignupLogin extends StatelessWidget {
           height: 48.h,
           decoration: BoxDecoration(
               border: Border.all(
-                color: Color(0xff8875FF),
+                color: KprimaryColor,
               ),
               borderRadius: BorderRadius.circular(2),
               color: color),
