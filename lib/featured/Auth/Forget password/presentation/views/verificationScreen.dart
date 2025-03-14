@@ -1,3 +1,4 @@
+import 'package:e_commerce/constnts.dart';
 import 'package:e_commerce/core/utils/app_router.dart';
 import 'package:e_commerce/core/utils/styles.dart';
 import 'package:e_commerce/core/widgets/custom_button.dart';
@@ -76,7 +77,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 GoRouter.of(context).push(AppRouter.passwordreset);
               },
               text: "Verify Code",
-              color: Color(0xff8875FF),
+              color: KprimaryColor,
               width: MediaQuery.of(context).size.width,
             ),
             SizedBox(height: 10),
@@ -86,7 +87,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 onPressed: () {},
                 child: Text(
                   "Resend email",
-                  style: Styles.textStyle14.copyWith(color: Color(0xff8875FF)),
+                  style: Styles.textStyle14.copyWith(color: KprimaryColor),
                 ),
               ),
             ]),

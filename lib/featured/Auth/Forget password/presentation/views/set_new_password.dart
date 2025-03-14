@@ -1,3 +1,4 @@
+import 'package:e_commerce/constnts.dart';
 import 'package:e_commerce/core/utils/styles.dart';
 import 'package:e_commerce/core/widgets/custom_button.dart';
 import 'package:e_commerce/featured/Auth/widgets/custom_textfield_for_password.dart';
@@ -56,7 +57,7 @@ class _SetNewPasswordState extends State<SetNewPassword> {
           SizedBox(height: 15,),
           CustomButton(
               text: 'Update Password',
-              color: Color(0xff8875FF),
+              color: KprimaryColor,
               width: MediaQuery.of(context).size.width)
         ]),
       ),

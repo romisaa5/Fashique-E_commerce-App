@@ -19,9 +19,7 @@ class CustomButtonSignupLogin extends StatelessWidget {
           width: width,
           height: 48.h,
           decoration: BoxDecoration(
-              border: Border.all(
-                color: KprimaryColor,
-              ),
+             
               borderRadius: BorderRadius.circular(2),
               color: color),
           child: Center(

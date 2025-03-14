@@ -19,40 +19,42 @@ class _FirstScreenState extends State<FirstScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30.0),
-        child: Column(
-          spacing: 25,
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Spacer(),
-            Image.asset('assets/images/onboard1.png'),
-             PageIndicator(currentIndex: 0, totalPages: 3),
-            Text('Discover the Latest Fashion Trends', style: Styles.textStyle32,textAlign: TextAlign.center,),
-            Text(
-              'Shop the hottest styles, from casual to chic, all in one place',
-              style: Styles.textStyle16,
-              textAlign: TextAlign.center,
-            ),
-            Spacer(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                CustomButton(
-                  width: 90.w,
-                  text: 'Next',
-                  color: KprimaryColor,
-                  onTap: () {
-                
-                    GoRouter.of(context).push(AppRouter.secondScreen);
-                  },
-                )
-              ],
-            ),
-            Spacer()
-          ],
+    return SafeArea(
+      child: Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30.0),
+          child: Column(
+            spacing: 20.h,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Spacer(),
+              Image.asset('assets/images/onboard1.png'),
+               PageIndicator(currentIndex: 0, totalPages: 3),
+              Text('Discover the Latest Fashion Trends', style: Styles.textStyle32,textAlign: TextAlign.center,),
+              Text(
+                'Shop the hottest styles, from casual to chic, all in one place',
+                style: Styles.textStyle16,
+                textAlign: TextAlign.center,
+              ),
+              Spacer(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  CustomButton(
+                    width: 90.w,
+                    text: 'Next',
+                    color: KprimaryColor,
+                    onTap: () {
+                  
+                      GoRouter.of(context).push(AppRouter.secondScreen);
+                    },
+                  )
+                ],
+              ),
+              Spacer()
+            ],
+          ),
         ),
       ),
     );

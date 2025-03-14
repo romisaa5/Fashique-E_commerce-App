@@ -13,47 +13,49 @@ class ThirdScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30.0),
-        child: Column(
-          spacing: 25,
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Spacer(),
-            Image.asset('assets/images/onboard3.png'),
-            PageIndicator(currentIndex: 2, totalPages: 3),
-            Text( 'Unlock Exclusive Offers', style: Styles.textStyle32, textAlign: TextAlign.center,),
-            Text(
-              'Get special discounts, early access to new arrivals, and rewards just for you',
-              style: Styles.textStyle16,
-              textAlign: TextAlign.center,
-            ),
-            Spacer(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CustomButton(
-                  width: 90.w,
-                  text: 'Back',
-                  color: Color(0xff000000),
-                  onTap: () {
-                    GoRouter.of(context).push(AppRouter.secondScreen);
-                  },
-                ),
-                CustomButton(
-                  width: 151.w,
-                  text: 'GETSTATED',
-                  color: KprimaryColor,
-                  onTap: () {
-                    GoRouter.of(context).push(AppRouter.welcomeView);
-                  },
-                )
-              ],
-            ),
-            Spacer()
-          ],
+    return SafeArea(
+      child: Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30.0),
+          child: Column(
+            spacing: 20.h,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Spacer(),
+              Image.asset('assets/images/onboard3.png'),
+              PageIndicator(currentIndex: 2, totalPages: 3),
+              Text( 'Unlock Exclusive Offers', style: Styles.textStyle32, textAlign: TextAlign.center,),
+              Text(
+                'Get special discounts, early access to new arrivals, and rewards just for you',
+                style: Styles.textStyle16,
+                textAlign: TextAlign.center,
+              ),
+              Spacer(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CustomButton(
+                    width: 90.w,
+                    text: 'Back',
+                    color: Color(0xff000000),
+                    onTap: () {
+                      GoRouter.of(context).push(AppRouter.secondScreen);
+                    },
+                  ),
+                  CustomButton(
+                    width: 151.w,
+                    text: 'GETSTATED',
+                    color: KprimaryColor,
+                    onTap: () {
+                      GoRouter.of(context).push(AppRouter.welcomeView);
+                    },
+                  )
+                ],
+              ),
+              Spacer()
+            ],
+          ),
         ),
       ),
     );

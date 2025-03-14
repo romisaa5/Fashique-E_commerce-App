@@ -1,3 +1,4 @@
+import 'package:e_commerce/constnts.dart';
 import 'package:e_commerce/core/utils/app_router.dart';
 import 'package:e_commerce/core/utils/styles.dart';
 import 'package:e_commerce/core/widgets/custom_button.dart';
@@ -44,7 +45,7 @@ class PasswordReset extends StatelessWidget {
                 GoRouter.of(context).push(AppRouter.setnewpassword);
               },
               text: "Confirm",
-              color: Color(0xff8875FF),
+              color: KprimaryColor,
               width: MediaQuery.of(context).size.width,
             ),
           ],

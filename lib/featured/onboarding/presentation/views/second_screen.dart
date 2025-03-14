@@ -13,47 +13,49 @@ class SecondScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 30.0),
-        child: Column(
-          spacing: 25,
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Spacer(),
-            Image.asset('assets/images/onboard2.png'),
-            PageIndicator(currentIndex: 1, totalPages: 3),
-            Text('Seamless Shopping Experience', style: Styles.textStyle32, textAlign: TextAlign.center,),
-            Text(
-              'Enjoy fast, secure, and hassle-free shopping with multiple payment options',
-              style: Styles.textStyle16,
-              textAlign: TextAlign.center,
-            ),
-            Spacer(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CustomButton(
-                  width: 90.w,
-                  text: 'Back',
-                  color: Color(0xff000000),
-                  onTap: () {
-                    GoRouter.of(context).push(AppRouter.firstScreen);
-                  },
-                ),
-                CustomButton(
-                  width: 90.w,
-                  text: 'Next',
-                  color: KprimaryColor,
-                  onTap: () {
-                    GoRouter.of(context).push(AppRouter.thirdScreen);
-                  },
-                ),
-              ],
-            ),
-            Spacer()
-          ],
+    return SafeArea(
+      child: Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30.0),
+          child: Column(
+            spacing: 20.h,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Spacer(),
+              Image.asset('assets/images/onboard2.png'),
+              PageIndicator(currentIndex: 1, totalPages: 3),
+              Text('Seamless Shopping Experience', style: Styles.textStyle32, textAlign: TextAlign.center,),
+              Text(
+                'Enjoy fast, secure, and hassle-free shopping with multiple payment options',
+                style: Styles.textStyle16,
+                textAlign: TextAlign.center,
+              ),
+              Spacer(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CustomButton(
+                    width: 90.w,
+                    text: 'Back',
+                    color: Color(0xff000000),
+                    onTap: () {
+                      GoRouter.of(context).push(AppRouter.firstScreen);
+                    },
+                  ),
+                  CustomButton(
+                    width: 90.w,
+                    text: 'Next',
+                    color: KprimaryColor,
+                    onTap: () {
+                      GoRouter.of(context).push(AppRouter.thirdScreen);
+                    },
+                  ),
+                ],
+              ),
+              Spacer()
+            ],
+          ),
         ),
       ),
     );
