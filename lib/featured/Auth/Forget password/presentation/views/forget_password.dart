@@ -2,7 +2,7 @@ import 'package:e_commerce/constnts.dart';
 import 'package:e_commerce/core/utils/app_router.dart';
 import 'package:e_commerce/core/utils/styles.dart';
 import 'package:e_commerce/core/widgets/custom_button.dart';
-import 'package:e_commerce/featured/Auth/widgets/custom_textfield_for_username.dart';
+import 'package:e_commerce/Featured/Auth/widgets/custom_textfield_for_username.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

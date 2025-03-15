@@ -3,9 +3,9 @@ import 'package:e_commerce/core/utils/app_router.dart';
 import 'package:e_commerce/core/utils/styles.dart';
 import 'package:e_commerce/core/widgets/custom_button.dart';
 import 'package:e_commerce/core/widgets/custom_button_signup_login.dart';
-import 'package:e_commerce/featured/Auth/widgets/custom_devider.dart';
-import 'package:e_commerce/featured/Auth/widgets/custom_textfield_for_password.dart';
-import 'package:e_commerce/featured/Auth/widgets/custom_textfield_for_username.dart';
+import 'package:e_commerce/Featured/Auth/widgets/custom_devider.dart';
+import 'package:e_commerce/Featured/Auth/widgets/custom_textfield_for_password.dart';
+import 'package:e_commerce/Featured/Auth/widgets/custom_textfield_for_username.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -32,24 +32,21 @@ class _RegisterViewState extends State<RegisterView> {
       child: Scaffold(
         resizeToAvoidBottomInset: true,
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 18.0),
           child: Form(
             key: _formKey,
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                spacing: 6,
+                spacing: 8.h,
                 children: [
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Icon(Icons.arrow_back_ios),
+                  Spacer(),
                   Text(
                     'Register',
                     style: Styles.textStyle32,
                   ),
                   SizedBox(height: 5.h),
                   Text(
-                    'User Name ',
+                    'Email',
                     style: Styles.textStyle14,
                   ),
                   CustomTextfieldForEmail(

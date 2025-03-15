@@ -1,15 +1,15 @@
 
 
-import 'package:e_commerce/featured/Auth/Forget%20password/presentation/views/forget_password.dart';
-import 'package:e_commerce/featured/Auth/Forget%20password/presentation/views/password_reset.dart';
-import 'package:e_commerce/featured/Auth/Forget%20password/presentation/views/set_new_password.dart';
-import 'package:e_commerce/featured/Auth/Forget%20password/presentation/views/verificationScreen.dart';
-import 'package:e_commerce/featured/Auth/Login/presentation/views/login_view.dart';
-import 'package:e_commerce/featured/Auth/Register/presentation/views/register_view.dart';
-import 'package:e_commerce/featured/onboarding/presentation/views/first_screen.dart';
-import 'package:e_commerce/featured/onboarding/presentation/views/second_screen.dart';
-import 'package:e_commerce/featured/onboarding/presentation/views/third_screen.dart';
-import 'package:e_commerce/featured/onboarding/presentation/views/welcome_view.dart';
+import 'package:e_commerce/Featured/Auth/Forget%20password/presentation/views/forget_password.dart';
+import 'package:e_commerce/Featured/Auth/Forget%20password/presentation/views/password_reset.dart';
+import 'package:e_commerce/Featured/Auth/Forget%20password/presentation/views/set_new_password.dart';
+import 'package:e_commerce/Featured/Auth/Forget%20password/presentation/views/verificationScreen.dart';
+import 'package:e_commerce/Featured/Auth/Login/presentation/views/login_view.dart';
+import 'package:e_commerce/Featured/Auth/Register/presentation/views/register_view.dart';
+import 'package:e_commerce/Featured/onboarding/presentation/views/first_screen.dart';
+import 'package:e_commerce/Featured/onboarding/presentation/views/second_screen.dart';
+import 'package:e_commerce/Featured/onboarding/presentation/views/third_screen.dart';
+import 'package:e_commerce/Featured/onboarding/presentation/views/welcome_view.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {

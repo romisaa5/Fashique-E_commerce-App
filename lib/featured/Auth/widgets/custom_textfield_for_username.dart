@@ -21,10 +21,7 @@ class _CustomTextfieldForEmailState extends State<CustomTextfieldForEmail> {
       },
       controller: widget.emailcontroller,
       decoration: InputDecoration(
-        labelText: 'Email',
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(6.0),
-        ),
+        hintText: 'Email',
         prefixIcon: const Icon(
           Icons.email,
           color: KprimaryColor,
