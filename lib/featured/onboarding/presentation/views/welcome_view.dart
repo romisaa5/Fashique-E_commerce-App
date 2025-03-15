@@ -23,7 +23,7 @@ class WelcomeView extends StatelessWidget {
             spacing: 15.h,
             children: [
               Text(
-                'Welcome to UpTodo',
+                'Welcome to Fashique',
                 style: Styles.textStyle32,
               ),
               Text(
