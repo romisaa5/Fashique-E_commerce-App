@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
             return MaterialApp.router(
               routerConfig: AppRouter.router,
               debugShowCheckedModeBanner: false,
-              theme: ThemeData.light(), // تحديد الثيم الأبيض (Light Mode)
+              theme: ThemeData.light(),
             );
           },
         );
