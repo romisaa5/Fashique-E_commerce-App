@@ -64,6 +64,11 @@ class _LoginViewState extends State<LoginView> {
                       ),
                     )),
                 CustomButton(
+                  onTap: (){
+                    if(_formkey.currentState!.validate()){
+                      
+                    }
+                  },
                     text: 'Login',
                     color: KprimaryColor,
                     width: MediaQuery.of(context).size.width),

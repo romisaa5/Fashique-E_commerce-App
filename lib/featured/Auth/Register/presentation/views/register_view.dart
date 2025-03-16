@@ -34,6 +34,7 @@ class _RegisterViewState extends State<RegisterView> {
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 18.0),
           child: Form(
+            
             key: _formKey,
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,6 +69,11 @@ class _RegisterViewState extends State<RegisterView> {
                   ),
                   Spacer(),
                   CustomButton(
+                    onTap: (){
+                      if(_formKey.currentState!.validate()){
+
+                      }
+                    },
                       text: 'Register',
                       color: KprimaryColor,
                       width: MediaQuery.of(context).size.width),
