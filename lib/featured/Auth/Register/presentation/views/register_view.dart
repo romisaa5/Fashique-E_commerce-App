@@ -1,3 +1,4 @@
+import 'package:e_commerce/Featured/Auth/Register/presentation/views/widgets/custom_confirm_password.dart';
 import 'package:e_commerce/constnts.dart';
 import 'package:e_commerce/core/utils/app_router.dart';
 import 'package:e_commerce/core/utils/styles.dart';
@@ -23,7 +24,8 @@ class _RegisterViewState extends State<RegisterView> {
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController confirmPasswordController =
       TextEditingController();
-
+  final passwordFocusNode = FocusNode();
+  final confirmpasswordFocusNode = FocusNode();
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -34,7 +36,6 @@ class _RegisterViewState extends State<RegisterView> {
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 18.0),
           child: Form(
-            
             key: _formKey,
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,29 +52,31 @@ class _RegisterViewState extends State<RegisterView> {
                     style: Styles.textStyle14,
                   ),
                   CustomTextfieldForEmail(
-                    emailcontroller: emailController,
+                    passwordFocusNode: passwordFocusNode,
+                    emailController: emailController,
                   ),
                   Text(
                     'Password',
                     style: Styles.textStyle14,
                   ),
                   CustomTextfieldforPassword(
+                    confirmpasswordFocusNode: confirmpasswordFocusNode,
+                    passwordFocusNode: passwordFocusNode,
                     passwordController: passwordController,
                   ),
                   Text(
                     'Confirm Password',
                     style: Styles.textStyle14,
                   ),
-                  CustomTextfieldforPassword(
-                    passwordController: confirmPasswordController,
+                  CustomConfirmPassword(
+                    confirmpasswordController: confirmPasswordController,
+                    confirmpasswordFocusNode: confirmpasswordFocusNode,
                   ),
                   Spacer(),
                   CustomButton(
-                    onTap: (){
-                      if(_formKey.currentState!.validate()){
-
-                      }
-                    },
+                      onTap: () {
+                        if (_formKey.currentState!.validate()) {}
+                      },
                       text: 'Register',
                       color: KprimaryColor,
                       width: MediaQuery.of(context).size.width),

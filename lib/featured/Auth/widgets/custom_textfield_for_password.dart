@@ -1,9 +1,15 @@
-import 'package:e_commerce/constnts.dart';
 import 'package:flutter/material.dart';
+import 'package:e_commerce/constnts.dart';
 
 class CustomTextfieldforPassword extends StatefulWidget {
   final TextEditingController passwordController;
- const CustomTextfieldforPassword({super.key, required this.passwordController});
+  final FocusNode? confirmpasswordFocusNode; // استقبل FocusNode
+  final FocusNode? passwordFocusNode;
+  const CustomTextfieldforPassword({
+    super.key,
+    required this.passwordController,
+    this.confirmpasswordFocusNode, this.passwordFocusNode, // إضافة FocusNode كـ required
+  });
 
   @override
   State<CustomTextfieldforPassword> createState() =>
@@ -13,10 +19,11 @@ class CustomTextfieldforPassword extends StatefulWidget {
 class _CustomTextfieldforPasswordState
     extends State<CustomTextfieldforPassword> {
   bool isshown = false;
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-       validator: (value) {
+      validator: (value) {
         if (value == null || value.isEmpty) {
           return 'The field is required';
         }
@@ -28,24 +35,21 @@ class _CustomTextfieldforPasswordState
         }
         return null;
       },
+        onEditingComplete: () {
+    FocusScope.of(context).requestFocus(widget.confirmpasswordFocusNode);
+  },
+      focusNode: widget.passwordFocusNode, 
       controller: widget.passwordController,
-      obscureText: isshown,
+      obscureText: !isshown,
       decoration: InputDecoration(
-        suffixIcon: isshown
-            ? IconButton(
-                onPressed: () {
-                  setState(() {
-                    isshown = !isshown;
-                  });
-                },
-                icon: Icon(Icons.visibility))
-            : IconButton(
-                onPressed: () {
-                  setState(() {
-                    isshown = !isshown;
-                  });
-                },
-                icon: Icon(Icons.visibility_off)),
+        suffixIcon: IconButton(
+          onPressed: () {
+            setState(() {
+              isshown = !isshown;
+            });
+          },
+          icon: Icon(isshown ? Icons.visibility : Icons.visibility_off),
+        ),
         hintText: 'Password',
         prefixIcon: const Icon(Icons.lock, color: KprimaryColor),
       ),

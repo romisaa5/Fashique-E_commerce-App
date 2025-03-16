@@ -23,6 +23,7 @@ class _LoginViewState extends State<LoginView> {
  final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final _formkey=GlobalKey<FormState>();
+  final passwordFocusNode = FocusNode(); 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -45,12 +46,16 @@ class _LoginViewState extends State<LoginView> {
                   'Email',
                   style: Styles.textStyle14,
                 ),
-                CustomTextfieldForEmail(emailcontroller: emailController,),
+                CustomTextfieldForEmail(
+                  passwordFocusNode: passwordFocusNode,
+                  emailController: emailController,),
                 Text(
                   'Password',
                   style: Styles.textStyle14,
                 ),
-                CustomTextfieldforPassword(passwordController: passwordController,),
+                CustomTextfieldforPassword(
+                  passwordFocusNode: passwordFocusNode,
+                  passwordController: passwordController,),
                 TextButton(
                     onPressed: () {
                       GoRouter.of(context).push(AppRouter.forgetpasssword);
@@ -66,7 +71,7 @@ class _LoginViewState extends State<LoginView> {
                 CustomButton(
                   onTap: (){
                     if(_formkey.currentState!.validate()){
-                      
+
                     }
                   },
                     text: 'Login',

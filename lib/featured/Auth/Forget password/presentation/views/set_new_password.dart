@@ -48,7 +48,8 @@ class _SetNewPasswordState extends State<SetNewPassword> {
             'Password',
             style: Styles.textStyle14,
           ),
-          CustomTextfieldforPassword(passwordController: passwordController,),
+          CustomTextfieldforPassword(
+            passwordController: passwordController,),
           Text(
             'Confirm Password',
             style: Styles.textStyle14,

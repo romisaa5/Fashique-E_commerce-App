@@ -16,6 +16,7 @@ class ForgetPassword extends StatefulWidget {
 
 class _ForgetPasswordState extends State<ForgetPassword> {
    final TextEditingController emailController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +42,8 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                   'Your Email ',
                   style: Styles.textStyle14,
                 ),
-                CustomTextfieldForEmail(emailcontroller: emailController,),
+                CustomTextfieldForEmail(
+                  emailController: emailController,),
                 CustomButton(
                   text: 'Reset Password',
                   color: KprimaryColor,
