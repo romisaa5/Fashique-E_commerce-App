@@ -38,6 +38,7 @@ class _CustomTextfieldforPasswordState
         onEditingComplete: () {
     FocusScope.of(context).requestFocus(widget.confirmpasswordFocusNode);
   },
+  textInputAction: TextInputAction.next,
       focusNode: widget.passwordFocusNode, 
       controller: widget.passwordController,
       obscureText: !isshown,

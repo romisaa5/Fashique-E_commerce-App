@@ -75,7 +75,9 @@ class _RegisterViewState extends State<RegisterView> {
                   Spacer(),
                   CustomButton(
                       onTap: () {
-                        if (_formKey.currentState!.validate()) {}
+                        if (_formKey.currentState!.validate()) {
+                          GoRouter.of(context).push(AppRouter.homeview);
+                        }
                       },
                       text: 'Register',
                       color: KprimaryColor,

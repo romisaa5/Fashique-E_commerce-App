@@ -11,7 +11,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 
-
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
 
@@ -20,18 +19,18 @@ class LoginView extends StatefulWidget {
 }
 
 class _LoginViewState extends State<LoginView> {
- final TextEditingController emailController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final _formkey=GlobalKey<FormState>();
-  final passwordFocusNode = FocusNode(); 
+  final _formkey = GlobalKey<FormState>();
+  final passwordFocusNode = FocusNode();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0,vertical: 18.0),
+          padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 18.0),
           child: Form(
-            key:_formkey ,
+            key: _formkey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               spacing: 8.h,
@@ -48,14 +47,16 @@ class _LoginViewState extends State<LoginView> {
                 ),
                 CustomTextfieldForEmail(
                   passwordFocusNode: passwordFocusNode,
-                  emailController: emailController,),
+                  emailController: emailController,
+                ),
                 Text(
                   'Password',
                   style: Styles.textStyle14,
                 ),
                 CustomTextfieldforPassword(
                   passwordFocusNode: passwordFocusNode,
-                  passwordController: passwordController,),
+                  passwordController: passwordController,
+                ),
                 TextButton(
                     onPressed: () {
                       GoRouter.of(context).push(AppRouter.forgetpasssword);
@@ -69,11 +70,11 @@ class _LoginViewState extends State<LoginView> {
                       ),
                     )),
                 CustomButton(
-                  onTap: (){
-                    if(_formkey.currentState!.validate()){
-
-                    }
-                  },
+                    onTap: () {
+                      if (_formkey.currentState!.validate()) {
+                        GoRouter.of(context).push(AppRouter.homeview);
+                      }
+                    },
                     text: 'Login',
                     color: KprimaryColor,
                     width: MediaQuery.of(context).size.width),
@@ -81,13 +82,11 @@ class _LoginViewState extends State<LoginView> {
                 CustomDevider(),
                 SizedBox(height: 10.h),
                 CustomButtonSignupLogin(
-                  
-                    icon:FontAwesomeIcons.google,
+                    icon: FontAwesomeIcons.google,
                     text: 'Login with Google',
                     color: Color(0xff000000),
                     width: MediaQuery.of(context).size.width),
                 CustomButtonSignupLogin(
-                  
                     icon: FontAwesomeIcons.squareFacebook,
                     text: 'Login with Facebook',
                     color: Color(0xff000000),

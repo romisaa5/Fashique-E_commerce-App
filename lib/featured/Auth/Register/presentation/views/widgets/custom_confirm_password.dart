@@ -21,6 +21,7 @@ class _CustomConfirmPasswordState extends State<CustomConfirmPassword> {
         }
         return null;
       },
+      
       focusNode: widget.confirmpasswordFocusNode, 
       controller: widget.confirmpasswordController,
       obscureText: !isshown,

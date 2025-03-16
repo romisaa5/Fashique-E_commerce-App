@@ -34,6 +34,7 @@ class _CustomTextfieldForEmailState extends State<CustomTextfieldForEmail> {
         
         FocusScope.of(context).requestFocus(widget.passwordFocusNode);
       },
+      textInputAction: TextInputAction.next,
       focusNode: _emailFocusNode,
       controller: widget.emailController,
       decoration: InputDecoration(

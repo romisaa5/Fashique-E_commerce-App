@@ -1,11 +1,10 @@
-
-
 import 'package:e_commerce/Featured/Auth/Forget%20password/presentation/views/forget_password.dart';
 import 'package:e_commerce/Featured/Auth/Forget%20password/presentation/views/password_reset.dart';
 import 'package:e_commerce/Featured/Auth/Forget%20password/presentation/views/set_new_password.dart';
 import 'package:e_commerce/Featured/Auth/Forget%20password/presentation/views/verificationScreen.dart';
 import 'package:e_commerce/Featured/Auth/Login/presentation/views/login_view.dart';
 import 'package:e_commerce/Featured/Auth/Register/presentation/views/register_view.dart';
+import 'package:e_commerce/Featured/Home/presentation/Views/homeview.dart';
 import 'package:e_commerce/Featured/onboarding/presentation/views/first_screen.dart';
 import 'package:e_commerce/Featured/onboarding/presentation/views/second_screen.dart';
 import 'package:e_commerce/Featured/onboarding/presentation/views/third_screen.dart';
@@ -23,6 +22,7 @@ abstract class AppRouter {
   static final verificationScreen = '/verificationScreen';
   static final passwordreset = '/passwordreset';
   static final setnewpassword = '/setnewpassword';
+  static final homeview = '/homeview';
   static final router = GoRouter(
     initialLocation: firstScreen,
     routes: [
@@ -65,6 +65,10 @@ abstract class AppRouter {
       GoRoute(
         path: setnewpassword,
         builder: (context, state) => SetNewPassword(),
+      ),
+      GoRoute(
+        path: homeview,
+        builder: (context, state) => Homeview(),
       ),
     ],
   );
