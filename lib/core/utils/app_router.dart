@@ -9,6 +9,8 @@ import 'package:e_commerce/Featured/onboarding/presentation/views/first_screen.d
 import 'package:e_commerce/Featured/onboarding/presentation/views/second_screen.dart';
 import 'package:e_commerce/Featured/onboarding/presentation/views/third_screen.dart';
 import 'package:e_commerce/Featured/onboarding/presentation/views/welcome_view.dart';
+import 'package:e_commerce/core/widgets/Bottom_nav_bar.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
@@ -22,7 +24,7 @@ abstract class AppRouter {
   static final verificationScreen = '/verificationScreen';
   static final passwordreset = '/passwordreset';
   static final setnewpassword = '/setnewpassword';
-  static final homeview = '/homeview';
+  static final bottnavbar = '/bottomnavbar';
   static final router = GoRouter(
     initialLocation: firstScreen,
     routes: [
@@ -67,8 +69,8 @@ abstract class AppRouter {
         builder: (context, state) => SetNewPassword(),
       ),
       GoRoute(
-        path: homeview,
-        builder: (context, state) => Homeview(),
+        path: bottnavbar,
+        builder: (context, state) => CustomBottomNavBar(),
       ),
     ],
   );

@@ -72,7 +72,7 @@ class _LoginViewState extends State<LoginView> {
                 CustomButton(
                     onTap: () {
                       if (_formkey.currentState!.validate()) {
-                        GoRouter.of(context).push(AppRouter.homeview);
+                        GoRouter.of(context).push(AppRouter.bottnavbar);
                       }
                     },
                     text: 'Login',
