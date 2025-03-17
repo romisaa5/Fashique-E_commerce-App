@@ -28,9 +28,9 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _screens[_currentIndex],
-         bottomNavigationBar: Container(
+      bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          color: KbackgroundColor, 
+          color: KbackgroundColor,
           boxShadow: [
             BoxShadow(
               color: Colors.black12,
@@ -40,47 +40,47 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
           ],
         ),
         child: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: KprimaryColor, // لون الأيقونة المحددة
-        unselectedItemColor: Colors.grey, // لون الأيقونات غير المحددة
-        selectedFontSize: 13,
-        unselectedFontSize: 11,
-        showUnselectedLabels: true,
-        items: List.generate(5, (index) {
-          final icons = [
-            Icons.home,
-            Icons.store,
-            Icons.shopping_bag,
-            Icons.favorite,
-            Icons.person
-          ];
-          final labels = ["Home", "Shop", "Bag", "Favorites", "Profile"];
+          currentIndex: _currentIndex,
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+          type: BottomNavigationBarType.fixed,
+          selectedItemColor: KprimaryColor,
+          unselectedItemColor: Colors.grey,
+          selectedFontSize: 13,
+          unselectedFontSize: 11,
+          showUnselectedLabels: true,
+          items: List.generate(5, (index) {
+            final icons = [
+              Icons.home,
+              Icons.store,
+              Icons.shopping_bag,
+              Icons.favorite,
+              Icons.person
+            ];
+            final labels = ["Home", "Shop", "Bag", "Favorites", "Profile"];
 
-          return BottomNavigationBarItem(
-            icon: AnimatedContainer(
-              duration: const Duration(milliseconds: 300),
-              transform: Matrix4.translationValues(
-                0,
-                _currentIndex == index ? -10 : 0, // تحريك الأيقونة للأعلى عند التحديد
-                0,
+            return BottomNavigationBarItem(
+              icon: AnimatedContainer(
+                duration: const Duration(milliseconds: 300),
+                transform: Matrix4.translationValues(
+                  0,
+                  _currentIndex == index ? -10 : 0,
+                  0,
+                ),
+                child: Icon(
+                  icons[index],
+                  size: _currentIndex == index ? 30 : 24,
+                  color: _currentIndex == index ? KprimaryColor : Colors.grey,
+                ),
               ),
-              child: Icon(
-                icons[index],
-                size: _currentIndex == index ? 30 : 24, // تكبير الأيقونة المحددة
-                color: _currentIndex == index ? KprimaryColor : Colors.grey, // لون مختلف عند التحديد
-              ),
-            ),
-            label: labels[index],
-          );
-        }),
+              label: labels[index],
+            );
+          }),
+        ),
       ),
-    ));
+    );
   }
 }
-
