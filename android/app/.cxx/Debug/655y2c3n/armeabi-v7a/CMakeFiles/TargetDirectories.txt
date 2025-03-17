@@ -1,0 +1,2 @@
+C:/Users/T-BOX/Desktop/apps_course_tharwat/e_commerce/android/app/.cxx/Debug/655y2c3n/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/T-BOX/Desktop/apps_course_tharwat/e_commerce/android/app/.cxx/Debug/655y2c3n/armeabi-v7a/CMakeFiles/rebuild_cache.dir
