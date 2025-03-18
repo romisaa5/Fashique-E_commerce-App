@@ -1,4 +1,5 @@
 import 'package:e_commerce/Featured/Home/presentation/Views/widgets/custom_red_container_widget.dart';
+import 'package:e_commerce/Featured/Home/presentation/Views/widgets/stars_rate.dart';
 import 'package:e_commerce/Featured/Home/presentation/models/product.dart';
 import 'package:e_commerce/constnts.dart';
 import 'package:e_commerce/core/utils/styles.dart';
@@ -54,15 +55,16 @@ class CustomListItemNewHome extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 4.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                spacing: 2.h,
+                
                 children: [
+                  StarsRate(),
                   Text(
                     product.category,
                     style: Styles.textStyle12.copyWith(color: Colors.grey),
                   ),
                   Text(
                     product.title,
-                    style: Styles.textStyle16
+                    style: Styles.textStyle14
                         .copyWith(fontWeight: FontWeight.w600),
                   ),
                   Text(
