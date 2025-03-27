@@ -1,7 +1,7 @@
-import 'package:e_commerce/Featured/Home/presentation/Views/widgets/custom_bannar.dart';
-import 'package:e_commerce/Featured/Home/presentation/Views/widgets/custom_build_header.dart';
-import 'package:e_commerce/Featured/Home/presentation/Views/widgets/custom_list_new_items.dart';
-import 'package:e_commerce/Featured/Home/presentation/Views/widgets/custom_list_sale_items.dart';
+import 'package:e_commerce/Featured/Home/presentation/widgets/custom_bannar.dart';
+import 'package:e_commerce/Featured/Home/presentation/widgets/custom_build_header.dart';
+import 'package:e_commerce/Featured/Home/presentation/widgets/custom_list_new_items.dart';
+import 'package:e_commerce/Featured/Home/presentation/widgets/custom_list_sale_items.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

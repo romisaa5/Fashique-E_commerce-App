@@ -1,4 +1,4 @@
-import 'package:e_commerce/Featured/Home/presentation/Views/widgets/custom_list_item_new_home.dart';
+import 'package:e_commerce/Featured/Home/presentation/widgets/custom_list_item_new_home.dart';
 import 'package:e_commerce/Featured/Home/presentation/models/product.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

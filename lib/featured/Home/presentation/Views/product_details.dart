@@ -1,5 +1,5 @@
-import 'package:e_commerce/Featured/Home/presentation/Views/widgets/drop_down_menu.dart';
-import 'package:e_commerce/Featured/Home/presentation/Views/widgets/stars_rate.dart';
+import 'package:e_commerce/Featured/Home/presentation/widgets/drop_down_menu.dart';
+import 'package:e_commerce/Featured/Home/presentation/widgets/stars_rate.dart';
 import 'package:e_commerce/Featured/Home/presentation/models/product.dart';
 import 'package:e_commerce/constnts.dart';
 import 'package:e_commerce/core/utils/app_router.dart';
