@@ -16,7 +16,7 @@ class CustomListItemNewHome extends StatefulWidget {
 }
 
 class _CustomListItemNewHomeState extends State<CustomListItemNewHome> {
-  bool isFavorite = false; 
+  bool isFavorite = false;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -35,13 +35,13 @@ class _CustomListItemNewHomeState extends State<CustomListItemNewHome> {
           ],
         ),
         child: Stack(
-          clipBehavior: Clip.none, 
+          clipBehavior: Clip.none,
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Stack(
-                  clipBehavior: Clip.none, 
+                  clipBehavior: Clip.none,
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(12.r),
@@ -52,9 +52,11 @@ class _CustomListItemNewHomeState extends State<CustomListItemNewHome> {
                         fit: BoxFit.cover,
                       ),
                     ),
-                    CustomRedcontainerWidget(value: 'New', product: widget.product),
+                    CustomcontainerWidget(
+                      color: Colors.black87,
+                        value: 'New', product: widget.product),
                     Positioned(
-                      top: 155.h, 
+                      top: 155.h,
                       right: 5.w,
                       child: Container(
                         width: 36.w,
@@ -76,7 +78,9 @@ class _CustomListItemNewHomeState extends State<CustomListItemNewHome> {
                             });
                           },
                           icon: Icon(
-                            isFavorite ? Icons.favorite : Icons.favorite_border_outlined,
+                            isFavorite
+                                ? Icons.favorite
+                                : Icons.favorite_border_outlined,
                             color: isFavorite ? Colors.red : Colors.black45,
                             size: 18,
                           ),
@@ -97,11 +101,13 @@ class _CustomListItemNewHomeState extends State<CustomListItemNewHome> {
                       ),
                       Text(
                         widget.product.title,
-                        style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w600),
+                        style: Styles.textStyle14
+                            .copyWith(fontWeight: FontWeight.w600),
                       ),
                       Text(
                         '${widget.product.price} \$',
-                        style: Styles.textStyle14.copyWith(color: KprimaryColor),
+                        style:
+                            Styles.textStyle14.copyWith(color: KprimaryColor),
                       )
                     ],
                   ),

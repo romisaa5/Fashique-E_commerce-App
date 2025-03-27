@@ -1,3 +1,4 @@
+import 'package:e_commerce/Featured/Home/presentation/Views/widgets/drop_down_menu.dart';
 import 'package:e_commerce/Featured/Home/presentation/Views/widgets/stars_rate.dart';
 import 'package:e_commerce/Featured/Home/presentation/models/product.dart';
 import 'package:e_commerce/constnts.dart';
@@ -54,8 +55,17 @@ class _ProductDetailsState extends State<ProductDetails> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+                         DropDown(
+                      hinttext: 'size',
+                      items: ['XS','S','M','L','XL'],
+                     ),
+                      DropDown(
+                      hinttext: 'Color',
+                      items: ['Black','Red','White','Yellow','Pink'],
+                     ),
+                     
                       SizedBox(
                         width: 36.w,
                         height: 36.h,
@@ -80,6 +90,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                           ),
                         ),
                       ),
+                  
                     ],
                   ),
                   Row(

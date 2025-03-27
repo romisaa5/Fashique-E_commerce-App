@@ -4,11 +4,12 @@ import 'package:e_commerce/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CustomRedcontainerWidget extends StatelessWidget {
-  const CustomRedcontainerWidget(
-      {super.key, required this.product, required this.value});
+class CustomcontainerWidget extends StatelessWidget {
+  const CustomcontainerWidget(
+      {super.key, required this.product, required this.value, required this.color});
   final Product product;
   final String value;
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -20,7 +21,7 @@ class CustomRedcontainerWidget extends StatelessWidget {
           height: 24.h,
           child: DecoratedBox(
             decoration: BoxDecoration(
-                color: KprimaryColor, borderRadius: BorderRadius.circular(24)),
+                color: color, borderRadius: BorderRadius.circular(24)),
             child: Center(
                 child: Text(
               value,

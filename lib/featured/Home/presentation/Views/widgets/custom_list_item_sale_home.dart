@@ -17,14 +17,15 @@ class CustomListItemSaleHome extends StatefulWidget {
 }
 
 class _CustomListItemSaleHomeState extends State<CustomListItemSaleHome> {
-   bool isFavorite = false;
+  bool isFavorite = false;
   @override
   Widget build(BuildContext context) {
-    double priceAfterDiscount =
-        widget.product.price + (widget.product.price * (widget.product.discountValue! / 100));
+    double priceAfterDiscount = widget.product.price +
+        (widget.product.price * (widget.product.discountValue! / 100));
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.detailsScreen , extra: widget.product);
+        GoRouter.of(context)
+            .push(AppRouter.detailsScreen, extra: widget.product);
       },
       child: SizedBox(
         height: 260.h,
@@ -41,14 +42,12 @@ class _CustomListItemSaleHomeState extends State<CustomListItemSaleHome> {
               )
             ],
           ),
-          child: Stack(
-            clipBehavior: Clip.none,
-            children:[
-               Column(
+          child: Stack(clipBehavior: Clip.none, children: [
+            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Stack(
-                  clipBehavior: Clip.none, 
+                  clipBehavior: Clip.none,
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(12.r),
@@ -59,11 +58,12 @@ class _CustomListItemSaleHomeState extends State<CustomListItemSaleHome> {
                         fit: BoxFit.cover,
                       ),
                     ),
-                    CustomRedcontainerWidget(
-                        value: '- ${widget.product.discountValue}%', product: widget.product)
-                 ,
-                 Positioned(
-                      top: 155.h, 
+                    CustomcontainerWidget(
+                      color: KprimaryColor,
+                        value: '- ${widget.product.discountValue}%',
+                        product: widget.product),
+                    Positioned(
+                      top: 155.h,
                       right: 5.w,
                       child: Container(
                         width: 36.w,
@@ -85,13 +85,16 @@ class _CustomListItemSaleHomeState extends State<CustomListItemSaleHome> {
                             });
                           },
                           icon: Icon(
-                            isFavorite ? Icons.favorite : Icons.favorite_border_outlined,
+                            isFavorite
+                                ? Icons.favorite
+                                : Icons.favorite_border_outlined,
                             color: isFavorite ? Colors.red : Colors.black45,
                             size: 18,
                           ),
                         ),
                       ),
-                    ), ],
+                    ),
+                  ],
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 4.0),
@@ -119,8 +122,8 @@ class _CustomListItemSaleHomeState extends State<CustomListItemSaleHome> {
                           ),
                           Text(
                             '${widget.product.price} \$',
-                            style:
-                                Styles.textStyle14.copyWith(color: KprimaryColor),
+                            style: Styles.textStyle14
+                                .copyWith(color: KprimaryColor),
                           )
                         ],
                       )
