@@ -73,6 +73,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
             ),
             SizedBox(height: 20),
             CustomButton(
+              borderreduis: 2,
               onTap: () {
                 GoRouter.of(context).push(AppRouter.passwordreset);
               },

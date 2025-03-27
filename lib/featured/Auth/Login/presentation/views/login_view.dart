@@ -70,6 +70,7 @@ class _LoginViewState extends State<LoginView> {
                       ),
                     )),
                 CustomButton(
+                  borderreduis: 2,
                     onTap: () {
                       if (_formkey.currentState!.validate()) {
                         GoRouter.of(context).push(AppRouter.bottnavbar);

@@ -36,6 +36,7 @@ class ThirdScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CustomButton(
+                    borderreduis: 2,
                     width: 90.w,
                     text: 'Back',
                     color: Color(0xff000000),
@@ -44,6 +45,7 @@ class ThirdScreen extends StatelessWidget {
                     },
                   ),
                   CustomButton(
+                    borderreduis: 2,
                     width: 151.w,
                     text: 'GETSTATED',
                     color: KprimaryColor,

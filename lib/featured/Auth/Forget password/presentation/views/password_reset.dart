@@ -41,6 +41,7 @@ class PasswordReset extends StatelessWidget {
               height: 20.h,
             ),
             CustomButton(
+              borderreduis: 2,
               onTap: () {
                 GoRouter.of(context).push(AppRouter.setnewpassword);
               },

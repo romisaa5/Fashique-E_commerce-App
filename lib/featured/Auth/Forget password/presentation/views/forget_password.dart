@@ -45,6 +45,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                 CustomTextfieldForEmail(
                   emailController: emailController,),
                 CustomButton(
+                  borderreduis: 2,
                   text: 'Reset Password',
                   color: KprimaryColor,
                   width: MediaQuery.of(context).size.width,

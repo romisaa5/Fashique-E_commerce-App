@@ -57,6 +57,7 @@ class _SetNewPasswordState extends State<SetNewPassword> {
           CustomTextfieldforPassword(passwordController:confirmpasswordController ,),
           SizedBox(height: 15,),
           CustomButton(
+            borderreduis: 2,
               text: 'Update Password',
               color: KprimaryColor,
               width: MediaQuery.of(context).size.width)

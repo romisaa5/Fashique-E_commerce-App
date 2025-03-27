@@ -33,6 +33,7 @@ class WelcomeView extends StatelessWidget {
               ),
               Spacer(),
               CustomButton(
+                borderreduis: 2,
                   onTap: () {
                     GoRouter.of(context).pushReplacement(AppRouter.loginView);
                   },
@@ -40,6 +41,7 @@ class WelcomeView extends StatelessWidget {
                   color: KprimaryColor,
                   width: MediaQuery.of(context).size.width),
               CustomButton(
+                borderreduis: 2,
                   onTap: () {
                     GoRouter.of(context).pushReplacement(AppRouter.registerView);
                   },

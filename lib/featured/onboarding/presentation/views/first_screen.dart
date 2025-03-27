@@ -42,6 +42,7 @@ class _FirstScreenState extends State<FirstScreen> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   CustomButton(
+                    borderreduis: 2,
                     width: 90.w,
                     text: 'Next',
                     color: KprimaryColor,

@@ -74,6 +74,7 @@ class _RegisterViewState extends State<RegisterView> {
                   ),
                   Spacer(),
                   CustomButton(
+                    borderreduis: 2,
                       onTap: () {
                         if (_formKey.currentState!.validate()) {
                           GoRouter.of(context).push(AppRouter.bottnavbar);
