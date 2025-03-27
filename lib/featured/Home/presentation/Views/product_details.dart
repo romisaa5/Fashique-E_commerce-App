@@ -93,6 +93,9 @@ class _ProductDetailsState extends State<ProductDetails> {
                ,SizedBox(height: 10,),
                CustomButton(borderreduis: 25,
                 text: 'Add to cart', color: KprimaryColor, width: double.infinity)
+,SizedBox(
+  height: 25.h,
+)
                 ],
               ),
             ),

@@ -74,7 +74,7 @@ class _RegisterViewState extends State<RegisterView> {
                   ),
                   Spacer(),
                   CustomButton(
-                    borderreduis: 2,
+                      borderreduis: 2,
                       onTap: () {
                         if (_formKey.currentState!.validate()) {
                           GoRouter.of(context).push(AppRouter.bottnavbar);
@@ -85,12 +85,12 @@ class _RegisterViewState extends State<RegisterView> {
                       width: MediaQuery.of(context).size.width),
                   CustomDevider(),
                   CustomButtonSignupLogin(
-                      icon: FontAwesomeIcons.google,
+                      imageIcon: 'assets/images/icons-google.png',
                       text: 'Register with Google',
                       color: Color(0xff000000),
                       width: MediaQuery.of(context).size.width),
                   CustomButtonSignupLogin(
-                      icon: FontAwesomeIcons.facebook,
+                      imageIcon: 'assets/images/icons-facebook-logo.png',
                       text: 'Register with Facebook',
                       color: Color(0xff000000),
                       width: MediaQuery.of(context).size.width),

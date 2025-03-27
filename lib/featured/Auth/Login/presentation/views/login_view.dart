@@ -70,7 +70,7 @@ class _LoginViewState extends State<LoginView> {
                       ),
                     )),
                 CustomButton(
-                  borderreduis: 2,
+                    borderreduis: 2,
                     onTap: () {
                       if (_formkey.currentState!.validate()) {
                         GoRouter.of(context).push(AppRouter.bottnavbar);
@@ -83,12 +83,12 @@ class _LoginViewState extends State<LoginView> {
                 CustomDevider(),
                 SizedBox(height: 10.h),
                 CustomButtonSignupLogin(
-                    icon: FontAwesomeIcons.google,
+                    imageIcon: 'assets/images/icons-google.png',
                     text: 'Login with Google',
                     color: Color(0xff000000),
                     width: MediaQuery.of(context).size.width),
                 CustomButtonSignupLogin(
-                    icon: FontAwesomeIcons.squareFacebook,
+                    imageIcon: 'assets/images/icons-facebook-logo.png',
                     text: 'Login with Facebook',
                     color: Color(0xff000000),
                     width: MediaQuery.of(context).size.width),
