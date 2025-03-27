@@ -3,16 +3,14 @@ import 'package:flutter/material.dart';
 class DropDown extends StatefulWidget {
   final List<String> items;
   final String hinttext;
-
-  DropDown({required this.items, required this.hinttext});
+  final void Function(String? value) onChanged;
+  DropDown({required this.items, required this.hinttext, required this.onChanged});
 
   @override
-  _DropDownState createState() => _DropDownState();
+  State<DropDown> createState() => _DropDownState();
 }
 
 class _DropDownState extends State<DropDown> {
-  String? selectedValue;
-
   @override
   Widget build(BuildContext context) {
     return IntrinsicWidth(
@@ -20,7 +18,7 @@ class _DropDownState extends State<DropDown> {
       child: IntrinsicHeight(
         child: DropdownButtonFormField<String>(
           dropdownColor: Colors.white,
-          value: selectedValue,
+          value: null,
           decoration: InputDecoration(
             hintText: widget.hinttext,
             border:
@@ -33,11 +31,7 @@ class _DropDownState extends State<DropDown> {
               child: Text(item),
             );
           }).toList(),
-          onChanged: (String? newValue) {
-            setState(() {
-              selectedValue = newValue;
-            });
-          },
+          onChanged: widget.onChanged
         ),
       ),
     );

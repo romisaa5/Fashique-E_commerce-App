@@ -19,7 +19,7 @@ class ProductDetails extends StatefulWidget {
 
 class _ProductDetailsState extends State<ProductDetails> {
   bool isFavorite = false;
-
+  String? selectedValue;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,15 +57,24 @@ class _ProductDetailsState extends State<ProductDetails> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                         DropDown(
-                      hinttext: 'size',
-                      items: ['XS','S','M','L','XL'],
-                     ),
                       DropDown(
-                      hinttext: 'Color',
-                      items: ['Black','Red','White','Yellow','Pink'],
-                     ),
-                     
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            selectedValue = newValue;
+                          });
+                        },
+                        hinttext: 'size',
+                        items: ['S', 'M', 'L', 'XL', 'XXL'],
+                      ),
+                      DropDown(
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            selectedValue = newValue;
+                          });
+                        },
+                        hinttext: 'Color',
+                        items: ['Black', 'Red', 'White', 'Yellow', 'Pink'],
+                      ),
                       SizedBox(
                         width: 36.w,
                         height: 36.h,
@@ -90,23 +99,41 @@ class _ProductDetailsState extends State<ProductDetails> {
                           ),
                         ),
                       ),
-                  
                     ],
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [Text(widget.product.title,style: Styles.textStyle18,), Text(' \$ ${widget.product.price} ',style: Styles.textStyle18,)],
+                    children: [
+                      Text(
+                        widget.product.title,
+                        style: Styles.textStyle18,
+                      ),
+                      Text(
+                        ' \$ ${widget.product.price} ',
+                        style: Styles.textStyle18,
+                      )
+                    ],
                   ),
-                  Text('Short black dress',style: Styles.textStyle12.copyWith(color: Colors.grey),),
+                  Text(
+                    'Short black dress',
+                    style: Styles.textStyle12.copyWith(color: Colors.grey),
+                  ),
                   StarsRate(),
-                  
-                  Text('Short dress in soft cotton jersey with decorative buttons down the front and a wide, frill-trimmed square neckline with concealed elastication. Elasticated seam under the bust and short puff sleeves with a small frill trim.',style: Styles.textStyle14,)
-               ,SizedBox(height: 10,),
-               CustomButton(borderreduis: 25,
-                text: 'Add to cart', color: KprimaryColor, width: double.infinity)
-,SizedBox(
-  height: 25.h,
-)
+                  Text(
+                    'Short dress in soft cotton jersey with decorative buttons down the front and a wide, frill-trimmed square neckline with concealed elastication. Elasticated seam under the bust and short puff sleeves with a small frill trim.',
+                    style: Styles.textStyle14,
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  CustomButton(
+                      borderreduis: 25,
+                      text: 'Add to cart',
+                      color: KprimaryColor,
+                      width: double.infinity),
+                  SizedBox(
+                    height: 25.h,
+                  )
                 ],
               ),
             ),
