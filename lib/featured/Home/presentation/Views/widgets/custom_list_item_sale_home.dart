@@ -8,17 +8,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
-class CustomListItemSaleHome extends StatelessWidget {
+class CustomListItemSaleHome extends StatefulWidget {
   const CustomListItemSaleHome({super.key, required this.product});
   final Product product;
 
   @override
+  State<CustomListItemSaleHome> createState() => _CustomListItemSaleHomeState();
+}
+
+class _CustomListItemSaleHomeState extends State<CustomListItemSaleHome> {
+   bool isFavorite = false;
+  @override
   Widget build(BuildContext context) {
     double priceAfterDiscount =
-        product.price + (product.price * (product.discountValue! / 100));
+        widget.product.price + (widget.product.price * (widget.product.discountValue! / 100));
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(AppRouter.detailsScreen , extra: product);
+        GoRouter.of(context).push(AppRouter.detailsScreen , extra: widget.product);
       },
       child: SizedBox(
         height: 260.h,
@@ -35,60 +41,95 @@ class CustomListItemSaleHome extends StatelessWidget {
               )
             ],
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Stack(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(12.r),
-                    child: Image.asset(
-                      product.imageUrl,
-                      height: 184.h,
-                      width: double.infinity,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  CustomRedcontainerWidget(
-                      value: '- ${product.discountValue}%', product: product)
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 4.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+          child: Stack(
+            clipBehavior: Clip.none,
+            children:[
+               Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Stack(
+                  clipBehavior: Clip.none, 
                   children: [
-                    StarsRate(),
-                    Text(
-                      product.category,
-                      style: Styles.textStyle12.copyWith(color: Colors.grey),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(12.r),
+                      child: Image.asset(
+                        widget.product.imageUrl,
+                        height: 184.h,
+                        width: double.infinity,
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                    Text(
-                      product.title,
-                      style: Styles.textStyle14
-                          .copyWith(fontWeight: FontWeight.w600),
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          '$priceAfterDiscount  ',
-                          style: TextStyle(
-                            color: Colors.grey,
-                            decoration: TextDecoration.lineThrough,
+                    CustomRedcontainerWidget(
+                        value: '- ${widget.product.discountValue}%', product: widget.product)
+                 ,
+                 Positioned(
+                      top: 155.h, 
+                      right: 5.w,
+                      child: Container(
+                        width: 36.w,
+                        height: 36.h,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black26,
+                              blurRadius: 3,
+                            )
+                          ],
+                        ),
+                        child: IconButton(
+                          onPressed: () {
+                            setState(() {
+                              isFavorite = !isFavorite;
+                            });
+                          },
+                          icon: Icon(
+                            isFavorite ? Icons.favorite : Icons.favorite_border_outlined,
+                            color: isFavorite ? Colors.red : Colors.black45,
+                            size: 18,
                           ),
                         ),
-                        Text(
-                          '${product.price} \$',
-                          style:
-                              Styles.textStyle14.copyWith(color: KprimaryColor),
-                        )
-                      ],
-                    )
-                  ],
+                      ),
+                    ), ],
                 ),
-              )
-            ],
-          ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      StarsRate(),
+                      Text(
+                        widget.product.category,
+                        style: Styles.textStyle12.copyWith(color: Colors.grey),
+                      ),
+                      Text(
+                        widget.product.title,
+                        style: Styles.textStyle14
+                            .copyWith(fontWeight: FontWeight.w600),
+                      ),
+                      Row(
+                        children: [
+                          Text(
+                            '$priceAfterDiscount  ',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              decoration: TextDecoration.lineThrough,
+                            ),
+                          ),
+                          Text(
+                            '${widget.product.price} \$',
+                            style:
+                                Styles.textStyle14.copyWith(color: KprimaryColor),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ]),
         ),
       ),
     );
